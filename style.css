@@ -1,45 +1,171 @@
+/* Custom Fonts */
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 @import url("https://fonts.googleapis.com/css?family=Square+Peg");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 /* Custom Cursor */
 body {
     cursor: url(https://i.imgur.com/q101Cot.png), auto;
 }
 
 body {
-    background-image: url("https://free4kwallpapers.com/uploads/wallpaper/aesthetic-minimal-wallpaper-1920x1080-wallpaper.jpg");
+    background: rgb(11, 22, 34) url("assets/images/chaebg15%opacity.png")
+        center/100% !important;
     background-color: rgb(11, 22, 34);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     font-family: "Square Peg";
+    height: 100%;
 }
 
+h1 {
+    color: #fff;
+    margin: auto;
+}
+
+h2 {
+    margin: 0;
+    padding-bottom: 35px;
+}
+
+h3 {
+    font-family: "Square Peg";
+    font-size: 1.7rem;
+    color: black;
+    margin: auto;
+    font-weight: 600;
+    padding: 75px;
+}
+p {
+    color: #ccc;
+}
+
+a {
+    color: #ff65b2;
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+/* Banner */
 .header {
-    padding: 60px;
-    text-align: center;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
     color: rgb(237, 241, 245);
+}
+
+.heading {
+    float: right;
+}
+
+/* Standing Pic in Banner */
+.myImage {
+    max-height: 250px;
+    max-width: 210px;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    display: inline-block;
 }
 
 /* "About Me Page" */
 .title {
+    -webkit-filter: drop-shadow(0px 0px 6px black);
     filter: drop-shadow(0px 0px 6px black);
     font-weight: 800;
-    margin: 0;
     font-size: 9rem;
+    max-width: 40ch;
+    -webkit-transform: scale(0.94);
+    -ms-transform: scale(0.94);
+    transform: scale(0.94);
+    -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
+
 /* "By Raphael Maagma" */
 .by {
+    -webkit-filter: drop-shadow(0px 0px 6px black);
     filter: drop-shadow(0px 0px 6px black);
     font-size: 5rem;
     text-transform: capitalize;
     font-weight: 600;
+    -webkit-transform: scale(0.94);
+    -ms-transform: scale(0.94);
+    transform: scale(0.94);
+    -webkit-animation: scale 6s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: scale 6s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    -webkit-animation-delay: 50s;
+    animation-delay: 50s;
 }
 
+/* Animation for Header Text */
+.animateable > span {
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+    -webkit-animation-name: show;
+    animation-name: show;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.animateable > span:nth-child(2) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.animateable > span:nth-child(3) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.animateable > span:nth-child(4) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.animateable > span:nth-child(5) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.animateable > span:nth-child(6) {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@-webkit-keyframes show {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Nav Bar */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: -webkit-sticky;
     /* For Safari */
     position: sticky;
     top: 0;
@@ -115,22 +241,143 @@ li a:hover {
     max-width: calc(1520px - 2 * (100px - 30px));
     padding: 30px 30px;
     border-radius: 0 0 10px 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+        /* Box Shadow */ rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
         /* Box Shadow */ rgba(0, 0, 0, 0.07) 0px 2px 4px,
         rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px;
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
 }
-/* Content Box Info Styling s*/
+/* Content Box Info Styling */
 .about {
     font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI",
         "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
     font-size: 1.5rem;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
-h1 {
-    color: #fff;
+.interests {
+    font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
-p {
-    color: #ccc;
+
+/* Enlarge on Hover */
+.enlargeImage {
+    display: block;
+    z-index: 999;
+    cursor: pointer;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
 }
+/* Hover over Image Scaling for Portrait Pciture*/
+.enlargeImage:hover {
+    -webkit-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    transform: scale(1.7);
+}
+
+/* Wrapper for Icon + Text*/
+div.social-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: Nunito;
+}
+
+/* Icon for social links */
+div.social-block > div.image {
+    border-radius: 5px;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(7, 8, 9, 0.75);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130px;
+}
+
+div.social-blocks {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+div.text {
+    font-size: 35px;
+    font-family: "Amatic SC";
+    font-weight: 800;
+}
+
+div.social-block:hover > .textGone {
+    opacity: 0%;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+/* Enlarge Icon on Hover */
+.enlargeIcon:hover {
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: -webkit-transform 0.8s;
+    -o-transition: transform 0.8s;
+    transition: transform 0.8s;
+    transition: transform 0.8s, -webkit-transform 0.8s;
+}
+
+.socialStatement {
+    text-align: center;
+    font-size: 100px;
+}
+
+.discordSocial {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
